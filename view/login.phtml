@@ -1,0 +1,12 @@
+<div class="content">
+    <form action="?r=login" method="post">
+        <label for="email">Email:</label>
+        <input id="email" type="text" name="email" placeholder="email"
+               value="<?php echo htmlspecialchars($this->email) ?>"
+               /><br />
+        <label for="pqssword">Password:</label>
+        <input name="password" type="password" name="password" /><br />
+        <input type="submit" /><br />
+        <a href="?r=registration">Regisration</a>
+    </form>
+</div>

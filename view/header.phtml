@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><?php echo $this->title ?></title>
+        <link rel="stylesheet" href="/style/style.css">
+    </head>
+    <body>
+        <?php if (!empty($this->messages['errors']) && is_array($this->messages['errors'])): ?>
+            <?php foreach ($this->messages['errors'] as $text): ?>
+                <?php echo htmlspecialchars($text) ?><br />
+            <?php endforeach ?>
+        <?php endif ?>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                text-decoration: none;
+            }
+            a{
+                color: black;
+                text-decoration: none;
+                margin: 5px;
+            }
+            a:hover{
+                color: cornflowerblue;
+            }
+            .head-art{
+                text-align: center;
+            }
+            .head-art h1{
+                margin-top: 10px;
+            }
+            .title{
+                color: black;
+                margin: 10px;
+                font-size: 1.5em;
+                font-family: "Comic Sans MS";
+            }
+            .article p{
+                color: black;
+                margin: 10px;
+                font-family: "Droid Sans Mono Dotted";
+            }
+            .content{
+                margin: 5px;
+                margin-top: 15px;
+            }
+        </style>
+        <?php if (!empty($this->messages['success']) && is_array($this->messages['success'])): ?>
+            <?php foreach ($this->messages['success'] as $text): ?>
+                <?php echo htmlspecialchars($text) ?><br />
+            <?php endforeach ?>
+        <?php endif ?>
+        <div class="menu">
+            <a href="?r=article">Article</a>
+            <a href="?r=login">Login</a>
+            <a href="?r=registration">Registration</a>
+            <a href="?r=addart">AddArt</a>
+        </div>

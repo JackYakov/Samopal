@@ -1,0 +1,34 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+a{
+    color: black;
+    text-decoration: none;
+    margin: 5px;
+}
+a:hover{
+    color: cornflowerblue;
+}
+.head-art{
+    text-align: center;
+}
+.head-art h1{
+    margin-top: 10px;
+}
+.title{
+    color: black;
+    margin: 10px;
+    font-size: 1.5em;
+    font-family: "Comic Sans MS";
+}
+.article p{
+    color: black;
+    margin: 10px;
+    font-family: "Droid Sans Mono Dotted";
+}
+.content{
+    margin: 5px;
+    margin-top: 15px;
+}

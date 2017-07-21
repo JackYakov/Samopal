@@ -18,7 +18,7 @@ class ActionArticle extends ActionAbstract {
         $dbLink = DbConnect::getInstance()->getLink();
         if ($result = mysqli_query($dbLink, $query)){
             while ($row = $result->fetch_assoc()) {
-                echo '<span class="title">'.$row['tetle'].'</span><p>'.$row['news'].'</p>';
+                echo '<span class="title">'.$row['tetle'].'</span><p>'.$row['news'].'</p><p>'.$row['ahtor'].'</p>';
             }
             echo '</div>';
 

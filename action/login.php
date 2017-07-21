@@ -1,6 +1,7 @@
 <?php
 
 require_once 'action/abstract.php';
+require_once 'action/users.php';
 
 class ActionLogin extends ActionAbstract {
 
@@ -35,6 +36,8 @@ class ActionLogin extends ActionAbstract {
 //        var_export($row);
                     if (md5($password . $row['salt']) == $row['password']) {
                         $this->messages['success'][] = 'congrads, you are logged in!!';
+                        /* Вот сюда*/
+                        Users::LogIn($email, $row['flag']);
                     } else {
                         $this->messages['errors'][] = 'authorization failed';
                     }

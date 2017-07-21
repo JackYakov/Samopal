@@ -57,3 +57,4 @@
             <a href="?r=registration">Registration</a>
             <a href="?r=addart">AddArt</a>
         </div>
+<?php if (isset($_SESSION['name'])) echo $_SESSION['name'];else echo 'none';?>

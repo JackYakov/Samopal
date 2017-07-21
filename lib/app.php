@@ -1,8 +1,9 @@
 <?php
 
 require_once 'action/iaction.php';
+require_once 'action/users.php';
 
-class Application {
+  class Application {
 
     private $_router;
 
@@ -18,11 +19,14 @@ class Application {
     {
         $actionName = $this->_router->getActionName();
         $action = new $actionName;
-        if ($action instanceof IAction) {
-            $action->run();
-            echo $action->getHtml();
+        session_start();
+        if (($actionName !== 'ActionArticle' and $actionName !== 'ActionRegistration') or Users::setSession()){
+            if ($action instanceof IAction) {
+                $action->run();
+                echo $action->getHtml();
 
-        }
 
+            }
+        }else echo 'Для не зарегестрированных доступ закрыт ';
     }
 }
